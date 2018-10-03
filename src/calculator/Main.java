@@ -38,8 +38,6 @@ public class Main {
 
     }
 
-
-
     public static double calculatResult(double firstNumber, double secondNumber, String operator) throws IllegalArgumentException {
 
         switch (operator) {
@@ -62,10 +60,10 @@ public class Main {
 
     public static double trigonometryResult(double number, String operator){
 
-        if ("sinus".equals(operator)) {
+        if ("s".equals(operator)) {
             return Math.sin(number);
         } else {
-            if ("cosinus".equals(operator)) {
+            if ("c".equals(operator)) {
                 return Math.cos(number);
             } else {
                 return 0;
