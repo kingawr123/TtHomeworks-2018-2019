@@ -3,18 +3,20 @@ package calculator;
 import java.util.Scanner;
 
 public class Main {
+    static double firstNumber = 0, secondNumber = 0, thirdNumber = 0;
+    static String firstOperator = "";
+    static String secondOperator = "";
+    static int angle = 0;
+    static String trigonometryOperator = "";
+
     public static void main(String[] args) {
-        double firstNumber = 0, secondNumber = 0, thirdNumber = 0;
-        String firstOperator = "", secondOperator = "";
-        int angle = 0;
-        String trigonometryOperator = "";
 
         switch (chooseCalculate()){
             case "z":
 
                 TwoOperationsCalculator twoOperationsCalculator = new TwoOperationsCalculator();
 
-                twoOperationsCalculator.takeNumbersAndOperators(firstNumber, firstOperator, secondNumber, secondOperator, thirdNumber);
+                twoOperationsCalculator.takeNumbersAndOperators();
 
                 try {
                     double firstResult = twoOperationsCalculator.calculatResult(firstNumber, secondNumber, firstOperator);

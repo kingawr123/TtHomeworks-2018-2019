@@ -1,6 +1,7 @@
 package calculator;
 
 import java.util.Scanner;
+import static calculator.Main.*;
 
 public class TwoOperationsCalculator {
 
@@ -26,18 +27,18 @@ public class TwoOperationsCalculator {
         }
     }
 
-    public static void takeNumbersAndOperators(double fN, String fO, double sN, String sO, double tN){
+    public static void takeNumbersAndOperators(){
         TwoOperationsCalculator twoOperationsCalculator = new TwoOperationsCalculator();
 
-        fN = twoOperationsCalculator.getNumber();
+        firstNumber = twoOperationsCalculator.getNumber();
 
-        fO = twoOperationsCalculator.getOperator();
+        firstOperator = twoOperationsCalculator.getOperator();
 
-        sN = twoOperationsCalculator.getNumber();
+        secondNumber = twoOperationsCalculator.getNumber();
 
-        sO = twoOperationsCalculator.getOperator();
+        secondOperator = twoOperationsCalculator.getOperator();
 
-        tN = twoOperationsCalculator.getNumber();
+        thirdNumber = twoOperationsCalculator.getNumber();
     }
 
     public static double getNumber() {
