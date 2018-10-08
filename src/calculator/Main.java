@@ -4,27 +4,22 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        double firstNumber = 0, secondNumber = 0, thirdNumber = 0;
+        String firstOperator = "", secondOperator = "";
+        int angle = 0;
+        String trigonometryOperator = "";
 
         switch (chooseCalculate()){
             case "z":
 
                 TwoOperationsCalculator twoOperationsCalculator = new TwoOperationsCalculator();
 
-                double firstNumber = twoOperationsCalculator.getNumber();
-
-                String firstOperator = twoOperationsCalculator.getOperator();
-
-                double secondNumber = twoOperationsCalculator.getNumber();
-
-                String secondOperator = twoOperationsCalculator.getOperator();
-
-                double thirdNumber = twoOperationsCalculator.getNumber();
+                twoOperationsCalculator.takeNumbersAndOperators(firstNumber, firstOperator, secondNumber, secondOperator, thirdNumber);
 
                 try {
                     double firstResult = twoOperationsCalculator.calculatResult(firstNumber, secondNumber, firstOperator);
-                    double endResult = twoOperationsCalculator.calculatResult(firstResult, thirdNumber, secondOperator);
+                    System.out.println(twoOperationsCalculator.calculatResult(firstResult, thirdNumber, secondOperator));
 
-                    System.out.println(endResult);
                 } catch (IllegalArgumentException exception) {
                     System.out.println(exception.getMessage());
                 }
@@ -33,8 +28,7 @@ public class Main {
 
                 TrigonometryCalculator trigonometryCalculator = new TrigonometryCalculator();
 
-                double angle = trigonometryCalculator.getAngle();
-                String trigonometryOperator = trigonometryCalculator.getTrigonometryOperator();
+                trigonometryCalculator.takeNumberAndOperator(angle, trigonometryOperator);
 
                 System.out.println(trigonometryCalculator.trigonometryResult(angle, trigonometryOperator));
                 break;

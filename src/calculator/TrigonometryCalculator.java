@@ -18,6 +18,13 @@ public class TrigonometryCalculator {
                 return 0;
         }
     }
+    public static void takeNumberAndOperator(double angle, String tO){
+        TrigonometryCalculator trigonometryCalculator = new TrigonometryCalculator();
+
+        angle = trigonometryCalculator.getAngle();
+        tO = trigonometryCalculator.getTrigonometryOperator();
+    }
+
     public static double getAngle() {
 
         System.out.println("Podaj kąt:");

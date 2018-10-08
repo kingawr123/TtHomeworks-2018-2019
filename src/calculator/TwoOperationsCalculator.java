@@ -26,6 +26,20 @@ public class TwoOperationsCalculator {
         }
     }
 
+    public static void takeNumbersAndOperators(double fN, String fO, double sN, String sO, double tN){
+        TwoOperationsCalculator twoOperationsCalculator = new TwoOperationsCalculator();
+
+        fN = twoOperationsCalculator.getNumber();
+
+        fO = twoOperationsCalculator.getOperator();
+
+        sN = twoOperationsCalculator.getNumber();
+
+        sO = twoOperationsCalculator.getOperator();
+
+        tN = twoOperationsCalculator.getNumber();
+    }
+
     public static double getNumber() {
 
         System.out.println("Podaj liczbę:");
