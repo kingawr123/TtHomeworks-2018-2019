@@ -6,18 +6,16 @@ public class Main {
     static double firstNumber = 0, secondNumber = 0, thirdNumber = 0;
     static String firstOperator = "";
     static String secondOperator = "";
-    static int angle = 0;
+    static double angle = 0;
     static String trigonometryOperator = "";
 
     public static void main(String[] args) {
 
         switch (chooseCalculate()){
             case "z":
-
                 TwoOperationsCalculator twoOperationsCalculator = new TwoOperationsCalculator();
 
                 twoOperationsCalculator.takeNumbersAndOperators();
-
                 try {
                     double firstResult = twoOperationsCalculator.calculatResult(firstNumber, secondNumber, firstOperator);
                     System.out.println(twoOperationsCalculator.calculatResult(firstResult, thirdNumber, secondOperator));
@@ -27,19 +25,16 @@ public class Main {
                 }
                 break;
             case "t":
-
                 TrigonometryCalculator trigonometryCalculator = new TrigonometryCalculator();
 
-                trigonometryCalculator.takeNumberAndOperator(angle, trigonometryOperator);
+                trigonometryCalculator.takeNumberAndOperator();
 
                 System.out.println(trigonometryCalculator.trigonometryResult(angle, trigonometryOperator));
                 break;
-                default:
-                    System.out.println("Error");
+                default: System.out.println("Error");
                     break;
         }
     }
-
     private static String chooseCalculate(){
         Scanner scanner = new Scanner(System.in);
 

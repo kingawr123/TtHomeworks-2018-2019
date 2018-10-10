@@ -1,6 +1,7 @@
 package calculator;
 
 import java.util.Scanner;
+import static calculator.Main.*;
 
 public class TrigonometryCalculator {
 
@@ -18,11 +19,11 @@ public class TrigonometryCalculator {
                 return 0;
         }
     }
-    public static void takeNumberAndOperator(double angle, String tO){
+    public static void takeNumberAndOperator(){
         TrigonometryCalculator trigonometryCalculator = new TrigonometryCalculator();
 
         angle = trigonometryCalculator.getAngle();
-        tO = trigonometryCalculator.getTrigonometryOperator();
+        trigonometryOperator = trigonometryCalculator.getTrigonometryOperator();
     }
 
     public static double getAngle() {
