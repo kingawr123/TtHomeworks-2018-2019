@@ -5,10 +5,9 @@ import static calculator.Main.*;
 
 public class TwoOperationsCalculator {
 
-    public static Scanner scanner = new Scanner(System.in);
+    private static Scanner scanner = new Scanner(System.in);
 
-    public static double calculatResult(double firstNumber, double secondNumber, String operator) throws IllegalArgumentException {
-
+    public double calculatResult(double firstNumber, double secondNumber, String operator) throws IllegalArgumentException {
         switch (operator) {
             case "+":
                 return firstNumber + secondNumber;
@@ -27,27 +26,26 @@ public class TwoOperationsCalculator {
         }
     }
 
-    public static void takeNumbersAndOperators(){
-        TwoOperationsCalculator twoOperationsCalculator = new TwoOperationsCalculator();
+    public void takeNumbersAndOperators(){
 
-        firstNumber = twoOperationsCalculator.getNumber();
+        firstNumber = getNumber();
 
-        firstOperator = twoOperationsCalculator.getOperator();
+        firstOperator = getOperator();
 
-        secondNumber = twoOperationsCalculator.getNumber();
+        secondNumber = getNumber();
 
-        secondOperator = twoOperationsCalculator.getOperator();
+        secondOperator = getOperator();
 
-        thirdNumber = twoOperationsCalculator.getNumber();
+        thirdNumber = getNumber();
     }
 
-    public static double getNumber() {
+    private double getNumber() {
 
         System.out.println("Podaj liczbę:");
         return scanner.nextDouble();
     }
 
-    public static String getOperator() {
+    private String getOperator() {
 
         System.out.println("'+' = dodawanie; '-' = odejmowanie; '*' = mnożenie; '/' = dzielenie; '%' = reszta z dzielenia; '^' = potęgowanie");
         System.out.println("Wybierz działanie:");

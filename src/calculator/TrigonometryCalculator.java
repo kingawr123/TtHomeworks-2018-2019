@@ -5,9 +5,9 @@ import static calculator.Main.*;
 
 public class TrigonometryCalculator {
 
-    public static Scanner scanner = new Scanner(System.in);
+    private static Scanner scanner = new Scanner(System.in);
 
-    public static double trigonometryResult(double number, String operator) {
+    public double trigonometryResult(double number, String operator) {
 
         switch (operator) {
             case "s":
@@ -19,21 +19,17 @@ public class TrigonometryCalculator {
                 return 0;
         }
     }
-    public static void takeNumberAndOperator(){
-        TrigonometryCalculator trigonometryCalculator = new TrigonometryCalculator();
-
-        angle = trigonometryCalculator.getAngle();
-        trigonometryOperator = trigonometryCalculator.getTrigonometryOperator();
+    public void takeNumberAndOperator(){
+        angle = getAngle();
+        trigonometryOperator = getTrigonometryOperator();
     }
 
-    public static double getAngle() {
-
+    private static double getAngle() {
         System.out.println("Podaj kąt:");
         return scanner.nextDouble();
     }
 
-    public static String getTrigonometryOperator() {
-
+    private static String getTrigonometryOperator() {
         System.out.println("'s' = sinus; 'c' = cosinus");
         System.out.println("Wybierz działanie:");
         return scanner.next();
