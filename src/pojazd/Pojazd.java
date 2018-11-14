@@ -2,18 +2,20 @@ package pojazd;
 
 public class Pojazd {
     private int obecnaPredkosc = 0;
-    private static int maxPredkosc;
-    private static int maxIloscPasazerow;
+    private int maxPredkosc;
+    private int maxIloscPasazerow;
     private int obecnaIloscPasazerow = 0;
     private String imieINazwiskoWlasciciela;
 
-    static {
-        maxPredkosc = 150;
-        maxIloscPasazerow = 6;
+    {
+        obecnaPredkosc = 0;
+        obecnaIloscPasazerow = 0;
     }
 
-    Pojazd(String imieINazwiskoWlasciciela){
+    Pojazd(String imieINazwiskoWlasciciela, int maxIloscPasazerow, int maxPredkosc){
         this.imieINazwiskoWlasciciela = imieINazwiskoWlasciciela;
+        this.maxIloscPasazerow = maxIloscPasazerow;
+        this.maxPredkosc = maxPredkosc;
         wyswietlMaxPredkosc();
         wyswietlMaxIloscPasazerow();
     }
