@@ -1,5 +1,5 @@
-Kinga Moscicka 1
-Kasia Buk 2
-Michał Kowalski 3
-Ola Nowak 4
-Asia Wrona 4
+﻿Wrona Kinga 1
+Buk Ala 2
+Mateusz Sarek 3
+Oskar Gorgis 4
+Dzierzak Ala 5

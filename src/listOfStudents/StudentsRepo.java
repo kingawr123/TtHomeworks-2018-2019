@@ -10,12 +10,12 @@ import java.util.Scanner;
 public class StudentsRepo {
 
     StudentsRepo() throws FileNotFoundException {
-        takeLineFromFile();
+        takeStudentsFromFile();
     }
 
     public static List<Student> list = new ArrayList<>();
 
-    public void takeLineFromFile() throws FileNotFoundException {
+    public void takeStudentsFromFile() throws FileNotFoundException {
         File file = new File("studentsList.txt");
         Scanner scanner = new Scanner(new FileInputStream(file));
         while (scanner.hasNextLine()){
