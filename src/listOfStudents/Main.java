@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         StudentsRepo studentsRepo = new StudentsRepo();
         try {
-            studentsRepo.addStudent(new Student("Dzierzak","Ala",5));
+            studentsRepo.addStudent(new Student("Kubica","Rafal",7));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
